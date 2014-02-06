@@ -32,8 +32,14 @@ post '/calc' do
     break if diff <= 0
   end
 
-  cost += (read / 200).to_i * 0.05
 
-  "Your consuming: #{read} KW <br /> Your cost: #{cost} JD"
+  total = cost + (read / 200).to_i * 0.05 + 1 + 1.7
+
+  "Your consuming: #{read} KW<br />
+  Your cost: #{'%.2f' % cost} JD<br />
+  TV tax: 1 JD<br />
+  Clean tax: 1.7 JD<br />
+  0.05 JD each 200 KW: #{(read / 200).to_i * 0.05} JD<br />
+  Total: <b>#{'%.2f' % total} JD</b>"
 end
 
