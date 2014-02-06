@@ -38,7 +38,7 @@ post '/calc' do
   "Your consuming: #{read} KW<br />
   Your cost: #{'%.2f' % cost} JD<br />
   TV tax: 1 JD<br />
-  Clean tax: 1.7 JD<br />
+  Cleaning tax: 1.7 JD<br />
   0.05 JD each 200 KW: #{(read / 200).to_i * 0.05} JD<br />
   Total: <b>#{'%.2f' % total} JD</b>"
 end
